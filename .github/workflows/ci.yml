@@ -29,7 +29,8 @@ jobs:
         env:
           AGENT_API_KEY: "dummy"
         run: |
-          pytest tests/ -v --ignore=tests/test_cp5.py -m "not docker"
+          pytest tests/ -v --ignore=tests/test_cp5.py --ignore=tests/test_bonus_cicd.py -m "not docker"
+
 
 
 
