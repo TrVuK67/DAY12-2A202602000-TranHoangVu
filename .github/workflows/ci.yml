@@ -53,7 +53,13 @@ jobs:
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
     steps:
       - name: Trigger Deploy Hook
+        env:
+          HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK }}
         run: |
-          echo "Triggering deploy hook using secrets"
-          curl -s -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}" || echo "Deploy hook executed or skipped"
+          if [ -n "$HOOK_URL" ]; then
+            curl -X POST "$HOOK_URL"
+          else
+            echo "RENDER_DEPLOY_HOOK secret is not set, skipping deployment trigger."
+          fi
+
 
