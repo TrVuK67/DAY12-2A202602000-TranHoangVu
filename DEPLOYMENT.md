@@ -18,7 +18,8 @@
 
 | Mục | Nội dung |
 |-----|----------|
-| Public URL | https://TODO-dien-url-render-vua-deploy-vao-day.onrender.com |
+| Public URL | https://day12-agent-3qlv.onrender.com |
+
 | Platform | Render |
 | Ngày deploy | 10/08/2026 |
 
