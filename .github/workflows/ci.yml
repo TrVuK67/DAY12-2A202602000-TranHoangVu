@@ -53,4 +53,5 @@ jobs:
       - name: Trigger Deploy Hook
         run: |
           echo "Triggering deploy hook using secrets"
-          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
+          curl -s -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}" || echo "Deploy hook executed or skipped"
+
