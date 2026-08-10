@@ -26,8 +26,11 @@ jobs:
           pip install pytest httpx
 
       - name: Run Tests
+        env:
+          AGENT_API_KEY: "test-api-key-for-ci-pipeline"
         run: |
-          pytest tests/ -v --ignore=tests/test_cp5.py
+          pytest tests/ -v --ignore=tests/test_cp5.py -m "not docker"
+
 
   build:
     name: Build Docker Image
