@@ -1,6 +1,7 @@
 # K3 — Ngày 12: Hạ Tầng Cloud & Deployment (9h00–13h00)
 
-![CI](https://github.com/TrVuK67/DAY12-2A202602000-TranHoangVu/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/TrVuK68/DAY12-2A202602000-TranHoangVu/actions/workflows/ci.yml/badge.svg)
+
 
 
 Đưa một AI agent từ `localhost:8000` lên một địa chỉ công khai mà người khác
